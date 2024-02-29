@@ -1,0 +1,176 @@
+@font-face {
+  font-family: "caslon";
+  src: url("../font/Big-Caslon-Medium.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.font-l {
+  font-size: 15rem;
+  line-height: 1;
+}
+.red-font {
+  font-size: 3rem;
+  color: #e72125;
+}
+.app {
+  font-family: "caslon";
+}
+.sp-img {
+  width: 100%;
+  display: block;
+}
+.sp-main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.sp-main::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 3px;
+  background-color: #000;
+  left: calc(45% - 1px);
+}
+
+.black-box {
+  width: 100%;
+  background-color: #000;
+}
+.sp-main .black-box {
+  position: absolute;
+  bottom: 0;
+  height: 20vh;
+  height: 12rem;
+  clip-path: polygon(45% 60%, 0% 100%, 100% 100%);
+}
+.sp-main .side-img {
+  height: 79vh;
+  height: 50rem;
+  position: absolute;
+}
+.sp-main .img1 {
+  left: 0;
+  top: 45%;
+  transform: translate(-50%, -50%);
+}
+.sp-main .img2 {
+  right: 0;
+  top: 50%;
+  transform: translate(38%, -50%);
+}
+.sp-main .black-tip {
+  position: absolute;
+  left: 2rem;
+  bottom: 3.5rem;
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+.sp-main .red-font {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-55%, -50%);
+}
+
+.sp-main .red-font > div:first-child {
+  margin-left: 2rem;
+  margin-top: -14rem;
+}
+.sp-main .red-font > div:last-child {
+  margin-top: 10rem;
+  margin-left: 2rem;
+}
+
+.lg-hide {
+  display: none;
+}
+.pl-font {
+  margin-left: 1.5rem;
+}
+@media (max-width: 780px) {
+  .part1 {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  .pl-font {
+    margin-left: 3rem;
+  }
+  .part1::after {
+    content: "";
+    top: 0;
+    position: absolute;
+    height: 100vh;
+    width: 2px;
+    background-color: #000;
+    left: 45.8%;
+  }
+
+  .sp-main-s .red-font {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 80%;
+    padding-left: 3%;
+    position: relative;
+    margin: 3rem auto 0;
+    font-size: 5rem;
+  }
+  .sp-main-s .font-l {
+    font-size: 28rem;
+    line-height: 1;
+  }
+  .sp-main-s .red-font > div:nth-child(1) {
+    margin-top: 0rem;
+  }
+  .sp-main-s .red-font > div:nth-child(2) {
+    margin-top: 10rem;
+  }
+  .sp-main-s .red-font > div:last-child {
+    margin-top: 10rem;
+    margin-left: 2rem;
+  }
+  .sp-main-s .center-img {
+    display: block;
+    width: 85%;
+    margin: auto;
+  }
+  .sp-main-s .black-box.top {
+    height: 20rem;
+    clip-path: polygon(45.9% 0%, 0% 100%, 100% 100%);
+  }
+  .sp-main-s .black-box.content {
+    padding-bottom: 10rem;
+    margin-top: -1px;
+  }
+  .sp-main-s .black-tip {
+    color: #fff;
+    font-size: 4rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .sp-main-s .black-tip .title {
+    font-size: 4.5rem;
+  }
+  .sp-main-s .bg1 {
+    background: url("../image/head-r.png") no-repeat;
+    background-position: -10% -10%;
+    background-size: 200% auto;
+  }
+  .sp-main-s .bg2 {
+    background: url("../image/head-l.png") no-repeat;
+    background-position: 163% 11%;
+    background-size: 145% auto;
+  }
+  .sm-hide {
+    display: none;
+  }
+  .lg-hide {
+    display: block;
+  }
+}

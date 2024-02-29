@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>书封</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="sp-main sm-hide">
+        <img class="side-img img1" src="./image/h1.png" alt="" />
+        <img class="side-img img2" src="./image/h2.png" alt="" />
+        <div class="black-box"></div>
+
+        <div class="red-font">
+          <div>
+            <p class="font-l">AI</p>
+            <div>
+              Artificial <br />
+              Intelligence
+            </div>
+          </div>
+          <div>
+            <p class="font-l">&</p>
+          </div>
+          <div>
+            <div class="pl-font">Natural <br />Intelligence</div>
+            <p class="font-l">NI</p>
+          </div>
+        </div>
+
+        <div class="black-tip">
+          <p>AI & NI Art Exhibition:</p>
+          <p>Redefine Artificial Intelligence & Natural</p>
+          <p>Intelligence by different forms of art and design.</p>
+        </div>
+      </div>
+      <div class="sp-main-s lg-hide">
+        <div class="part1">
+          <div class="red-font">
+            <div>
+              <p class="font-l">AI</p>
+              <div>
+                Artificial <br />
+                Intelligence
+              </div>
+            </div>
+            <div>
+              <p class="font-l">&</p>
+            </div>
+            <div>
+              <div class="pl-font">Natural <br />Intelligence</div>
+              <p class="font-l">NI</p>
+            </div>
+          </div>
+          <img class="center-img" src="./image/h1+2.png" alt="" />
+
+          <div class="black-box top"></div>
+          <div class="black-box content">
+            <div class="black-tip">
+              <p class="title">AI & NI Art Exhibition:</p>
+              <br />
+              <p>Redefine Artificial Intelligence & Natural</p>
+              <p>Intelligence by different forms of art and design.</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg1">
+          <img class="sp-img" src="./image/AI-image.png" alt="" />
+        </div>
+        <div class="bg2">
+          <img class="sp-img" src="./image/NI-image.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <script>
+      function setRem() {
+        // The scale of the current page width relative to 750 width
+        const scale = document.documentElement.clientWidth / 1920;
+        // Set the font size of the root node on the page. 
+        //Lock 16px on the PC and adapt on the mobile phone
+        // document.documentElement.style.fontSize = isMobile ? 16 * scale + 'px' : '16px'
+        document.documentElement.style.fontSize = 16 * scale + "px";
+      }
+
+      const initRem = () => {
+        // Invoke once, initialize rem
+        setRem();
+        // Call once, initialize the height of the visible area.
+
+        const i =
+          "orientationchange" in window ? "orientationchange" : "resize";
+
+        // When the window size changes, reset rem with throttling to prevent freezing when the window size changes.
+        let timer = undefined;
+        window.addEventListener(i, function () {
+          if (timer) {
+            clearTimeout(timer);
+          }
+          timer = window.setTimeout(() => {
+            setRem();
+            clearTimeout(timer);
+          }, 200);
+        });
+      };
+
+      initRem();
+    </script>
+  </body>
+</html>
